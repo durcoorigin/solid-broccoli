@@ -1,8 +1,11 @@
-const resolvers = { 
+const { User, bookSchema } = require('../models');
+
+const resolvers = {
     Query: {
-        helloWorld: () => {
-            return 'Hello world!';
-        }
+        me: async (parent, { username }) => {
+        return me.findOne({ username })
+        .select('-__v -password')
+        },
     }
 };
 
