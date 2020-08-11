@@ -1,5 +1,13 @@
+// import { useQuery } from '@apollo/react-hooks';
+// import { GET_ME } from '../utils/queries';
+
 // route to get logged in user's info (needs the token)
-export const getMe = (token) => {
+export const GET_ME = (token) => {
+ // use useQuery hook to make query request
+//  const { data } = useQuery(GET_ME);
+
+//  const me = data?.me || [];
+
   return fetch('/api/users/me', {
     headers: {
       'Content-Type': 'application/json',
